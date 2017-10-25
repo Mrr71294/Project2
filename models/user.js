@@ -8,9 +8,8 @@ const userSchema = new Schema({
   email      : String,
   password   : String,
   aboutMe    : String,
-  imgUrl     : { type: String, default: "https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97250&w=250&h=250" }
+  imgUrl     : { type: String, default: "/images/person-placeholder.jpg" }
 });
-
 
 
 

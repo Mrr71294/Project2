@@ -21,23 +21,11 @@ const igdb               = require('igdb-api-node').default;
 
 const app = express();
 
-global.mashapeKey = 'c9258795fba813411d8fa399c4222a2e';
-const client = igdb(global.mashapeKey);
 
-client.games({
-    fields: '*', // Return all fields
-    limit: 5, // Limit to 5 results
-    offset: 15, // Index offset for results
-    search: 'zelda'
-}).then(response => {
-    console.log(response);
-}).catch(error => {
-    throw error;
-});
 
 mongoose.connect('mongodb://localhost:27017/Gamer');
 
-
+// console.log(req.user.username);
 
 // view engine setup///////////////////////////////////////////////////////////
 app.set('views', path.join(__dirname, 'views'));
@@ -71,13 +59,11 @@ passport.use('local-signup', new LocalStrategy(
   { passReqToCallback: true },
   (req, username, password, next) => {
     // To avoid race conditions
-    console.log("Before Error");
     process.nextTick(() => {
         User.findOne({
             'username': username
         }, (err, user) => {
             if (err){
-              console.log("error: ",err);
               return next(err); }
 
             if (user) {

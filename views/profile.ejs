@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-4 colum">
-          <p>UserName</p>
+          <div class="row">
+            <p><%=req.user.username %></p>
+          </div>
+          <div class="row">
+            <img class="profilePic" src="/images/person-placeholder.jpg" alt="Profile Image">
+          </div>
         </div>
         <div class="col-sm-3 colum">
           <p>Consoles</p>
         </div>
-        <div class="col-sm-5 colum">
+        <div class="col-sm-5 colum1">
           <p>Games</p>
         </div>
       </div>
     </div>
-  </body>
-</html>
