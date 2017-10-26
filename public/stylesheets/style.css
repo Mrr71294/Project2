@@ -155,3 +155,20 @@ label {
   width:150px;
   margin-left: 155px;
 }
+
+#aboutme{
+  height:150px;
+  margin: 10px 10px 10px 10px;
+  background-color: white;
+  color:black;
+}
+
+#aboutMeEditButton{
+float:right;
+margin-right: 25px;
+color:black;
+}
+#firstName, #lastName{
+  color:black;
+  margin: 10px 20px 10px 20px;
+}

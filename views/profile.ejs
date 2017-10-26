@@ -1,11 +1,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-4 colum">
-          <div class="row">
-            <p><%=req.user.username %></p>
-          </div>
-          <div class="row">
-            <img class="profilePic" src="/images/person-placeholder.jpg" alt="Profile Image">
+          <form action="/profile/edit" method="post">
+            <div class="row">
+              <p><%=req.user.username %></p>
+            </div>
+            <div class="row">
+              <img class="profilePic" src="/images/person-placeholder.jpg" alt="Profile Image">
+            </div>
+            <div class="row">
+              <input id="firstName"type="text" name="firstName" value="<%=req.user.firstName%>"></input>
+              <input id="lastName"type="text" name="lastName" value="<%=req.user.lastName%>"></input>
+            <div class="row">
+              <input id=aboutMeEditButton type=submit value="Update"></input>
+            </div>
+          </form>
           </div>
         </div>
         <div class="col-sm-3 colum">

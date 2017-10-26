@@ -17,15 +17,52 @@ const bcrypt             = require('bcrypt');
 const passport           = require('passport');
 const profile            = require('./routes/profile');
 const igdb               = require('igdb-api-node').default;
-//const client             = igdb('c9258795fba813411d8fa399c4222a2e');
 
 const app = express();
 
 
+require("dotenv").config();
+mongoose.connect(process.env.MONGODB_URI);
 
-mongoose.connect('mongodb://localhost:27017/Gamer');
 
-// console.log(req.user.username);
+
+
+
+
+
+
+
+
+
+//gamebar
+// for
+//   client.games({
+//       fields: '*', // Return all fields
+//       limit: 5, // Limit to 5 results
+//       offset: 15, // Index offset for results
+//       search: 'mortal kombat'
+//   }).then(response => {
+//       console.log(response);
+//       res.render('index');
+//
+//       res.render('index', {'games':response.body});
+//   }).catch(error => {
+//       throw error;
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // view engine setup///////////////////////////////////////////////////////////
 app.set('views', path.join(__dirname, 'views'));
