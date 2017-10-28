@@ -11,20 +11,5 @@ const userSchema = new Schema({
   imgUrl     : { type: String, default: "/images/person-placeholder.jpg" }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const User = mongoose.model('User', userSchema);
 module.exports = User;

@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="col-lg-12 results-container">
+    <% console.log(games);%>
+      <% games.forEach((currentGame) => { %>
+        <div class="row gameresult" data-reward="<%= currentGame.id %>">
+          <h2 class="light-text"><%= currentGame.name %></h2>
+          <h3 class="light-text"><%= currentGame.rating %></h3>
+          <img class="gamePic" src="<%= currentGame.cover%>"></img>
+          <p class="light-text"><%= currentGame.summary %></p>
+          <hr>
+        </div>
+      <%  }) %>
+  </div>
+</div>

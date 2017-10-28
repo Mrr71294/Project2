@@ -17,6 +17,7 @@ const bcrypt             = require('bcrypt');
 const passport           = require('passport');
 const profile            = require('./routes/profile');
 const igdb               = require('igdb-api-node').default;
+const results            = require('./routes/results');
 
 const app = express();
 
@@ -34,7 +35,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 
 
-//gamebar
+// gamebar
 // for
 //   client.games({
 //       fields: '*', // Return all fields
@@ -172,6 +173,7 @@ app.use('/', profile);
 app.use('/', index);
 app.use('/users', users);
 app.use('/', authRoutes);
+app.use('/results', results);
 
 ///////////////////////////////////////////////////////////////////////////////
 

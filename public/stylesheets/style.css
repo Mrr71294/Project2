@@ -44,11 +44,7 @@ a {
 .home-heading-wrapper > p {
   font-size: 2rem;
 }
-.btn-logout {
-  color: white;
-  padding: 17px;
-  border: 0;
-}
+
 
 .colum {
   height:100%;
@@ -82,10 +78,14 @@ a {
 .topnav {
     background-color: #333;
     overflow: hidden;
-    /*box-shadow: 0px 4px 10px 0 white;*/
     box-shadow: 0px 4px 10px 0 orange;
-
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
     margin-bottom:15px;
+    height:65px;
+    z-index:999;
 }
 
 /* Style the links inside the navigation bar */
@@ -100,17 +100,17 @@ a {
 }
 .topnav button {
     float: right;
-    display: block;
+    /*display: block;*/
     color: #f2f2f2;
-    text-align: center;
-    padding: 20px 16px;
+    /*text-align: center;*/
+    /*padding: 20px 16px;*/
     text-decoration: none;
     font-size: 17px;
 }
 .topnav input {
     float: left;
     display: block;
-    margin: 20px 16px;
+    margin-right: 5px;
     text-decoration: none;
 }
 
@@ -171,4 +171,25 @@ color:black;
 #firstName, #lastName{
   color:black;
   margin: 10px 20px 10px 20px;
+}
+.results-container{
+  margin-bottom: 60px;
+  margin-top: 65px;
+  left:0
+}
+
+.gameresult{
+  left:0
+}
+.light-text{
+  color:white;
+}
+.profile-container{
+  margin-top:75px
+}
+
+.gamePic{
+  height: 150px;
+  width: 150px;
+  margin-bottom: 3px;
 }

@@ -1,9 +1,9 @@
     <div class="container-fluid">
-      <div class="row">
+      <div class="row profile-container">
         <div class="col-sm-4 colum">
           <form action="/profile/edit" method="post">
             <div class="row">
-              <p><%=req.user.username %></p>
+              <h3 class="light-text"><%=req.user.username %></h3>
             </div>
             <div class="row">
               <img class="profilePic" src="/images/person-placeholder.jpg" alt="Profile Image">
@@ -17,10 +17,10 @@
           </form>
           </div>
         </div>
-        <div class="col-sm-3 colum">
+        <!-- <div class="col-sm-3 colum">
           <p>Consoles</p>
-        </div>
-        <div class="col-sm-5 colum1">
+        </div> -->
+        <div class="col-sm-8 colum1">
           <p>Games</p>
         </div>
       </div>
